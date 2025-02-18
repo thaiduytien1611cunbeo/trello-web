@@ -24,6 +24,14 @@
 
 # 7. Phân tích layout Trello
 
-# 8. Code thanh header
+# 8. Code thanh AppBar
 
     + Dùng thư viện (svgr icon) để giúp import ảnh svg như 1 icon
+
+# 9. Code thanh BoardBar
+
+# 10. Code BoardContent
+
+# 11. Code Column
+
+# 12. Code Drag, Drop to DnDkit

@@ -46,7 +46,7 @@ function BoardBar({ board }) {
           theme.palette.mode === "dark" ? "#34495e" : "#1976d2",
       }}
     >
-      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+      {/* <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
         <Chip
           icon={<DashboardIcon />}
           label={board?.title}
@@ -125,7 +125,7 @@ function BoardBar({ board }) {
             <Avatar alt="Remy Sharp" src="https://picsum.photos/200/300" />
           </Tooltip>
         </AvatarGroup>
-      </Box>
+      </Box> */}
     </Box>
   );
 }
