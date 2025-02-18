@@ -1,42 +1,42 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Divider from "@mui/material/Divider";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Check from "@mui/icons-material/Check";
+import React from 'react'
+import Button from '@mui/material/Button'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Divider from '@mui/material/Divider'
+import ListItemText from '@mui/material/ListItemText'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import Check from '@mui/icons-material/Check'
 
 function Recent() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const open = Boolean(anchorEl)
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget)
+  }
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
   return (
     <div>
       <Button
-        sx={{ color: "white" }}
-        id="basic-button-recent"
-        aria-controls={open ? "basic-menu-recent" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        sx={{ color: 'white' }}
+        id='basic-button-recent'
+        aria-controls={open ? 'basic-menu-recent' : undefined}
+        aria-haspopup='true'
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         endIcon={<ExpandMoreIcon />}
       >
         Recent
       </Button>
       <Menu
-        id="basic-menu-recent"
+        id='basic-menu-recent'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          "aria-labelledby": "basic-button-recent",
+          'aria-labelledby': 'basic-button-recent'
         }}
       >
         <MenuItem>
@@ -67,7 +67,7 @@ function Recent() {
         </MenuItem>
       </Menu>
     </div>
-  );
+  )
 }
 
-export default Recent;
+export default Recent

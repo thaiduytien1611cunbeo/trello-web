@@ -1,42 +1,42 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Divider from "@mui/material/Divider";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Check from "@mui/icons-material/Check";
+import React from 'react'
+import Button from '@mui/material/Button'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Divider from '@mui/material/Divider'
+import ListItemText from '@mui/material/ListItemText'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import Check from '@mui/icons-material/Check'
 
 function Templates() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  const [anchorEl, setAnchorEl] = React.useState(null)
+  const open = Boolean(anchorEl)
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget)
+  }
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
   return (
     <div>
       <Button
-        sx={{ color: "white" }}
-        id="basic-button-templates"
-        aria-controls={open ? "basic-menu-templates" : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? "true" : undefined}
+        sx={{ color: 'white' }}
+        id='basic-button-templates'
+        aria-controls={open ? 'basic-menu-templates' : undefined}
+        aria-haspopup='true'
+        aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         endIcon={<ExpandMoreIcon />}
       >
         Templates
       </Button>
       <Menu
-        id="basic-menu-templates"
+        id='basic-menu-templates'
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
         MenuListProps={{
-          "aria-labelledby": "basic-button-templates",
+          'aria-labelledby': 'basic-button-templates'
         }}
       >
         <MenuItem>
@@ -67,7 +67,7 @@ function Templates() {
         </MenuItem>
       </Menu>
     </div>
-  );
+  )
 }
 
-export default Templates;
+export default Templates
