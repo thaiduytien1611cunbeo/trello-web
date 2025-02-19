@@ -4,13 +4,14 @@ import { mapOrder } from '~/utils/sort'
 
 import {
   DndContext,
-  PointerSensor,
+  // PointerSensor,
   MouseSensor,
   TouchSensor,
   useSensor,
   useSensors,
   DragOverlay,
-  defaultDropAnimationSideEffects
+  defaultDropAnimationSideEffects,
+  closestCorners
 } from '@dnd-kit/core'
 import { arrayMove } from '@dnd-kit/sortable'
 import { useEffect, useState } from 'react'
@@ -26,9 +27,9 @@ const ACTIVE_DRAG_ITEM_TYPE = {
 
 function BoardContent({ board }) {
   // Dùng pointerSensor thì trên web cũng ok nhưng trên mobile đang gặp bug nhé
-  const pointerSensor = useSensor(PointerSensor, {
-    activationConstraint: { distance: 10 }
-  })
+  // const pointerSensor = useSensor(PointerSensor, {
+  //   activationConstraint: { distance: 10 }
+  // })
   // Yêu cầu phải kéo item di chuyển khoảng 10px thì mới kích hoạt event onDragEnd
   const mouseSensor = useSensor(MouseSensor, {
     activationConstraint: { distance: 3, delay: 250, tolerance: 10 }
@@ -86,16 +87,14 @@ function BoardContent({ board }) {
     // check nếu 2 column khác nhau thì mới xử lý
     if (activeColumn._id !== overColumn._id) {
       setOrderedColumns(prevColumns => {
-        const overCardIndex = overColumn?.card?.findIndex(card => card._id === overCardId)
-
-        let newCardIndex
+        const overCardIndex = overColumn?.cards?.findIndex(card => card._id === overCardId)
 
         const isBelowOverItem =
           active.rect.current.translated &&
           active.rect.current.translated.top > over.rect.top + over.rect.height
-
         const modifier = isBelowOverItem ? 1 : 0
 
+        let newCardIndex
         newCardIndex = overCardIndex >= 0 ? overCardIndex + modifier : overColumn?.cards.length + 1
 
         // clone từ column cũ ra để return về column mới (dùng thư viện lodash)
@@ -172,6 +171,7 @@ function BoardContent({ board }) {
   return (
     <DndContext
       sensors={sensors}
+      collisionDetection={closestCorners}
       onDragStart={handleDragStart}
       onDragOver={handleDragOver}
       onDragEnd={handleDragEnd}
