@@ -45,47 +45,22 @@ function BoardBar({ board }) {
         bgcolor: theme => (theme.palette.mode === 'dark' ? '#34495e' : '#1976d2')
       }}
     >
-      {/* <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <Chip
-          icon={<DashboardIcon />}
-          label={board?.title}
-          clickable
-          sx={MENU_STYLES}
-        />
-        <Chip
-          icon={<VpnLockIcon />}
-          label={capitalizeFirstLetter(board?.type)}
-          clickable
-          sx={MENU_STYLES}
-        />
-        <Chip
-          icon={<AddToDriveIcon />}
-          label="Add to Google Drive"
-          clickable
-          sx={MENU_STYLES}
-        />
-        <Chip
-          icon={<BoltIcon />}
-          label="Automation"
-          clickable
-          sx={MENU_STYLES}
-        />
-        <Chip
-          icon={<FilterListIcon />}
-          label="Filters"
-          clickable
-          sx={MENU_STYLES}
-        />
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Chip icon={<DashboardIcon />} label={board?.title} clickable sx={MENU_STYLES} />
+        <Chip icon={<VpnLockIcon />} label={capitalizeFirstLetter(board?.type)} clickable sx={MENU_STYLES} />
+        <Chip icon={<AddToDriveIcon />} label='Add to Google Drive' clickable sx={MENU_STYLES} />
+        <Chip icon={<BoltIcon />} label='Automation' clickable sx={MENU_STYLES} />
+        <Chip icon={<FilterListIcon />} label='Filters' clickable sx={MENU_STYLES} />
       </Box>
 
-      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <Button
-          variant="outlined"
+          variant='outlined'
           startIcon={<PersonAddIcon />}
           sx={{
-            color: "white",
-            borderColor: "white",
-            "&:hover": { color: "white" },
+            color: 'white',
+            borderColor: 'white',
+            '&:hover': { color: 'white' }
           }}
         >
           Invite
@@ -93,38 +68,38 @@ function BoardBar({ board }) {
         <AvatarGroup
           max={4}
           sx={{
-            gap: "10px",
-            ".MuiAvatar-root": {
+            gap: '10px',
+            '.MuiAvatar-root': {
               width: 34,
               height: 34,
               fontSize: 16,
-              border: "none",
-              color: "white",
-              cursor: "pointer",
-              "&:first-of-type": { bgcolor: "#a4b0be" },
-            },
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              '&:first-of-type': { bgcolor: '#a4b0be' }
+            }
           }}
         >
-          <Tooltip title="Duy Tien">
-            <Avatar alt="Remy Sharp" src="https://picsum.photos/200/300" />
+          <Tooltip title='Duy Tien'>
+            <Avatar alt='Remy Sharp' src='https://picsum.photos/200/300' />
           </Tooltip>
-          <Tooltip title="Duy Tien">
-            <Avatar alt="Remy Sharp" src="https://picsum.photos/200/300" />
+          <Tooltip title='Duy Tien'>
+            <Avatar alt='Remy Sharp' src='https://picsum.photos/200/300' />
           </Tooltip>
-          <Tooltip title="Duy Tien">
-            <Avatar alt="Remy Sharp" src="https://picsum.photos/200/300" />
+          <Tooltip title='Duy Tien'>
+            <Avatar alt='Remy Sharp' src='https://picsum.photos/200/300' />
           </Tooltip>
-          <Tooltip title="Duy Tien">
-            <Avatar alt="Remy Sharp" src="https://picsum.photos/200/300" />
+          <Tooltip title='Duy Tien'>
+            <Avatar alt='Remy Sharp' src='https://picsum.photos/200/300' />
           </Tooltip>
-          <Tooltip title="Duy Tien">
-            <Avatar alt="Remy Sharp" src="https://picsum.photos/200/300" />
+          <Tooltip title='Duy Tien'>
+            <Avatar alt='Remy Sharp' src='https://picsum.photos/200/300' />
           </Tooltip>
-          <Tooltip title="Duy Tien">
-            <Avatar alt="Remy Sharp" src="https://picsum.photos/200/300" />
+          <Tooltip title='Duy Tien'>
+            <Avatar alt='Remy Sharp' src='https://picsum.photos/200/300' />
           </Tooltip>
         </AvatarGroup>
-      </Box> */}
+      </Box>
     </Box>
   )
 }

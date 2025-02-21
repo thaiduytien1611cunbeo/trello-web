@@ -39,14 +39,11 @@ function AppBar() {
         bgcolor: theme => (theme.palette.mode === 'dark' ? '#2c3e50' : '#1565c0')
       }}
     >
-      {/* <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <AppsIcon sx={{ color: 'white' }} />
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
           <SvgIcon component={TrelloIcon} inheritViewBox fontSize='small' sx={{ color: 'white' }} />
-          <Typography
-            variant='span'
-            sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white' }}
-          >
+          <Typography variant='span' sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'white' }}>
             Trello
           </Typography>
         </Box>
@@ -69,6 +66,7 @@ function AppBar() {
           </Button>
         </Box>
       </Box>
+
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <TextField
           id='outlined-search'
@@ -76,7 +74,7 @@ function AppBar() {
           type='text'
           size='small'
           value={searchValue}
-          onChange={(e) => {
+          onChange={e => {
             setSearchValue(e.target.value)
           }}
           slotProps={{
@@ -131,7 +129,7 @@ function AppBar() {
           <HelpOutlineIcon sx={{ cursor: 'pointer', color: 'white' }} />
         </Tooltip>
         <Profiles />
-      </Box> */}
+      </Box>
     </Box>
   )
 }
